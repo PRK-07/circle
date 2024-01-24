@@ -1,0 +1,6 @@
+*Variable name can contain numbers,digits and characters.
+*variable names should start with a letter.
+*It can be start with $ and _ .
+*names are case sensitive.
+*keywords cannot be used .
+*

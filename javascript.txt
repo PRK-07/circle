@@ -1,0 +1,241 @@
+Variable Rules :
+
+*Variable name can contain numbers,digits and characters.
+*variable names should start with a letter.
+*It can be start with $ and _ .
+*names are case sensitive.
+*keywords cannot be used .
+*names should be in camel case, fullStackDev.
+*variable name length should be 16.
+*should not contain any space
+*variables can be declared in 4 ways :
+1)automatically
+2)using var
+3)using let
+4)using const
+*always use const if the value should not be changed
+*always use const if the type should not be changed(arrays and objects).
+*only use let ,if you can't use const.
+*var- if you must support old browser.
+
+Data Type Rules :
+
+*A variable without a value, has the value undefined 
+ex:
+let car;
+undefined
+car
+*any variable can be emptified by setting the value to undefined.
+ex:
+car="BMW"
+'BMW'
+car=undefined;
+undefined
+*const mySymbol = Symbol();
+it is useful for creating API's
+when you want to assign a unique identifier to an object.
+*typeof 5
+'number'
+typeof "ff"
+'string'
+it gives us the given is number or string.
+*const person = {firstName:"vijay",lastName:"joseph"}
+undefined
+person
+{firstName: 'vijay', lastName: 'joseph'}
+person.firstName
+'vijay'
+it can only be accessed by (.).
+
+typeof person
+'object'
+typeof person.firstName
+'string'
+person['firstName']
+'vijay'
+*Operators :
+1)Arithmetic operators :
++,-,*,/,%
+2)Relational Operators :
+>,<,<=,>=,==,!=
+3)Logical Operators :
+&&,||,!
+4)Assignment Operators :
+=
+5)Bitwise Operators :
+
+1)Bitwise AND
+2)Bitwise OR
+3)Bitwise NOT
+4)Bitwise XOR
+5 - 0101
+1 - 0001
+& - 0001
+| - 0101
+^ - 0100
+~ - -6
+
+5 << 1 --> 5 - 0101
+	       1010
+
+6)Ternary Operator :
+4<5?true:false
+True
+
+Arrays Rules:
+
+*const cars = ["BMW","Audi","Thar"];
+output :
+undefined
+cars
+output :
+["BMW","Audi","Thar"]
+*const actors = []
+undefined
+actors[0] = "rajini"
+'rajini'
+actors[1] = "kamal"
+'kamal'
+actors[2] = "dhanush"
+'dhanush'
+actors[3] = "SK"
+'SK'
+*const cars = new Array("BMw","Audi","PRK");
+undefined
+cars
+(3) ['BMw', 'Audi', 'PRK']
+another method to initialize array
+*Adding the elements to the array
+cars[3] = 'tata'
+'tata'
+cars
+(4) ['BMw', 'Audi', 'PRK', 'tata']
+
+*Array to String change :(Typecasting)
+
+a=["FF","rk"];
+['FF', 'rk']
+let ok=a.toString();
+undefined
+ok
+'FF,rk'
+
+*if...else Statement :
+
+age=18;
+if(age>=18)
+{
+console.log("eligible")
+}
+else
+{
+console.log("not eligible")
+}
+
+*Switch Statemennt :
+
+switch(new Date().getDay())
+{
+case 6:
+console.log("Saturdayy");
+break;
+case 0:
+console.log("Sunday");
+break;
+default :
+console.log("looking for weekend");
+}
+
+*For loop :
+
+for (let index = 0; index < 5; index ++)
+    console.log(index);
+output :
+0
+1
+2
+3
+4
+5
+
+*while loop :
+
+let x =0 ,text = ""
+while(x<=5){
+    text += x + " ";
+    x++;
+} text;
+Output :
+'0 1 2 3 4 5 '
+
+*Do...while loop :
+
+let x=0,text = " ";
+do {
+    text += x + " " ;
+    x++;
+}while(x<=5)x;
+Output :
+6
+
+*Functions and Scope :
+
+function add(a,b){
+    let k= 3;
+    console.log(k);
+    return a+b;
+}
+let k = 3;
+add(4,5)
+function add(a,b) {
+    console.log(k);
+}
+add(4,5)
+
+output :
+3
+3
+
+* function greet() {
+    console.log('How r u');
+}
+
+setTimeout(greet, 3000);
+console.log('hi');
+VM3511:6 hi
+undefined
+VM3511:2 How r u
+
+*function greetingAfterSometime(name,callback) {
+    setTimeout(function () {
+        console.log("Heloo" + name + " ");
+        callback();
+    },2000);
+}
+function sayBye() {
+    console.log("GoodBye");
+}
+greetingAfterSometime("dude",sayBye);
+undefined
+VM3920:3 Heloodude 
+VM3920:8 GoodBye
+
+
+*function isAuthorized() {
+    return Math.random()>0.5;    
+}
+function checkAuthorization() {
+    return new Promise(function(resolve,reject) {
+        setTimeout(function(){
+            if(isAuthorized()){
+                resolve("Authorized");
+    }
+            else{
+                reject("unauthorised");
+}},1000);
+    });
+}checkAuthorization().then(function(message){
+    console.log(message);}).catch(function(error)
+                                  {console.error(error);});
+Promise {<pending>}
+VM4625:15 Authorized

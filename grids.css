@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  gap: 70px;
+  background-color: rgb(44, 155, 62);
+  text-align: center;
+}
+.item {
+  border-radius: 20px;
+  padding: 15px;
+  border: solid blanchedalmond;
+  border-width: 5px;background-color: rgb(43, 152, 216);
+  text-align: center;
+}
+title{
+  text-align: center;
+}
